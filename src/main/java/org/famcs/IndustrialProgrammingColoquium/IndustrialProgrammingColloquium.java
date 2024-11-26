@@ -4,6 +4,8 @@
 
 package org.famcs.IndustrialProgrammingColoquium;
 
+import java.util.List;
+
 /**
  *
  * @author supre
@@ -11,6 +13,12 @@ package org.famcs.IndustrialProgrammingColoquium;
 public class IndustrialProgrammingColloquium 
 {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        try {
+        int n = 100; 
+            List<Long> fibonacciNumbers = Fibonacci.generateFibonacci(n);
+            System.out.println("First " + n + " Fibonacci numbers: " + fibonacciNumbers);
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error: " + e.getMessage());
+        }
     }
 }
